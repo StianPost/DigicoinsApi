@@ -1,6 +1,5 @@
 const main = document.querySelector('main');
 const url = 'https://api.coinranking.com/v2/coins';
-const coinBG = document.querySelector('.coins');
 
 async function getCoins() {
   const response = await fetch(url);
@@ -10,7 +9,7 @@ async function getCoins() {
 
   for (let i = 0; i < allCoins.length; i++) {
     main.innerHTML += `
-    <div class="coins">
+    <div class="coins ${allCoins[i].symbol}">
     <img src="${allCoins[i].iconUrl}" height="50px" >
     <h2>${allCoins[i].name}</h2>
     <p>${allCoins[i].symbol}</p>
