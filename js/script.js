@@ -11,15 +11,19 @@ async function getCoins() {
   for (let i = 0; i < allCoins.length; i++) {
     main.innerHTML += `
     <div class="coins">
-    <img src="${allCoins[i].iconUrl}" width="50px" >
+    <img src="${allCoins[i].iconUrl}" height="50px" >
     <h2>${allCoins[i].name}</h2>
+    <p>${allCoins[i].symbol}</p>
+    <p>Price: ${allCoins[i].price}</p>
+    <p>Ranking: ${allCoins[i].rank}</p>
+    <p>MC: ${allCoins[i].marketCap}</p>
     </div>
     `;
-    console.log(allCoins[i].color);
-    // if (allCoins[i].color === null) {
-    //   coinBG.style.backgroundColor = 'white';
-    // } else {
+    // console.log(allCoins[i]);
+    // if (allCoins[i].color) {
     //   coinBG.style.backgroundColor = allCoins[i].color;
+    // } else {
+    //   coinBG.style.backgroundColor = 'white';
     // }
   }
 }
