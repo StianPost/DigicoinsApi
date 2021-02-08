@@ -5,9 +5,19 @@
 main {
   display: flex;
   flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
 }
 .coins {
   width: 300px;
   height: 200px;
   border: black 2px solid;
+  border-radius: 5px;
+  margin: 5px;
+}
+.odd {
+  background-color: lightyellow;
+}
+.even {
+  background-color: lightblue;
 }
